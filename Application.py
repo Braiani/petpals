@@ -4,9 +4,11 @@ class Application:
     def __init__(self) -> None:
         self.janela = ctk.CTk()
         self.title = 'PetPals'
-        self.background = 'white'
+        self.ctk = ctk.set_appearance_mode("dark")
+        self.background = '#F8F9FA'
         self.set_background(self.background)
         self.set_geometry(1920,1080)
+        
 
     def set_geometry(self, width, height):
         self.janela.attributes('-toolwindow', True)
