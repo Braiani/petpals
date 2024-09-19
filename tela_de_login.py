@@ -10,32 +10,32 @@ login.geometry("1920x1080")
 my_image = ctk.CTkImage(
     light_image=Image.open(r"C:\Users\RafaelMontiel\Downloads\casadog2.png"),
     dark_image=Image.open(r"C:\Users\RafaelMontiel\Downloads\casadog2.png"),
-    size=(150, 150)  
+    size=(100, 100)  
 )
 
-image_label = ctk.CTkLabel(master=login, image=my_image, text="Logo Podre de Chique", compound="top")
-image_label.place(x=960, y=200, anchor='center')  
+image_label = ctk.CTkLabel(master=login, image=my_image, text="PetPal", compound="left", font=('Verdana',20,'bold'))
+image_label.place(x=70, y=35, anchor='center')  
 
-frame_login = ctk.CTkFrame(master=login, width=510, height=500, corner_radius=10)
-frame_login.place(x=960, y=540, anchor='center')
+frame_login = ctk.CTkFrame(master=login, width=400, height=300, corner_radius=10)
+frame_login.place(relx=0.5, rely=0.5, anchor='center')
 
-label_nome_email = ctk.CTkLabel(master=frame_login, text="Nome/Email")
-label_nome_email.grid(row=0, column=0, padx=5, pady=5)
+label_nome_email = ctk.CTkLabel(master=frame_login, text="Nome/Email", font=('Verdana',15,'bold'))
+label_nome_email.place(relx=0.18, rely=0.15, anchor='center')
 
-entry_nome_email = ctk.CTkEntry(master=frame_login, width=400)
-entry_nome_email.grid(row=1, column=0, padx=5, pady=5)
+entry_nome_email = ctk.CTkEntry(master=frame_login, width=350)
+entry_nome_email.place(relx=0.50, rely=0.25, anchor='center')
 
-label_senha = ctk.CTkLabel(master=frame_login, text="Senha")
-label_senha.grid(row=2, column=0, padx=5, pady=5)
+label_senha = ctk.CTkLabel(master=frame_login, text="Senha", font=('Verdana',15,'bold'))
+label_senha.place(relx=0.12, rely=0.35, anchor='center')
 
-entry_senha = ctk.CTkEntry(master=frame_login, width=400, show="*")
-entry_senha.grid(row=3, column=0, padx=5, pady=5)
+entry_senha = ctk.CTkEntry(master=frame_login, width=350, show="*")
+entry_senha.place(relx=0.50, rely=0.45, anchor='center')
 
-button_cadastrar = ctk.CTkButton(master=frame_login, text="Cadastrar")
-button_cadastrar.grid(row=4, column=0, sticky='nw')
+button_cadastrar = ctk.CTkButton(master=frame_login, text="Cadastrar", fg_color='dark orange')
+button_cadastrar.place(relx=0.35, rely=0.55, anchor='center')
 
-button_login = ctk.CTkButton(master=frame_login, text="Entrar")
-button_login.grid(row=4, column=1, sticky='n')
+button_login = ctk.CTkButton(master=frame_login, text="Entrar", fg_color='dark orange')
+button_login.place(relx=0.75, rely=0.55, anchor='center')
 
 
 login.mainloop()
