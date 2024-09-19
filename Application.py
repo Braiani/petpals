@@ -11,7 +11,7 @@ class Application:
     def set_geometry(self, width, height):
         self.janela.attributes('-toolwindow', True)
 
-        self.janela.geometry(f"{width}x{height}+0+0")
+        self.janela.geometry(f"{width}x{height}+-10+0")
 
     def set_title(self, title=""):
         self.janela.title(title)
