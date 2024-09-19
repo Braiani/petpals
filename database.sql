@@ -27,7 +27,7 @@ CREATE TABLE products (
 
 CREATE TABLE statuses (
     id_status int auto_increment primary key,
-    description varchar(200) not null,
+    description varchar(200) not null
 );
 
 CREATE TABLE carts (
