@@ -14,6 +14,14 @@ login.set_title("Login")
 login.set_geometry("1920", "1080")
 login.set_background("white")
 
+bg_imagem = ctk.CTkImage(
+    light_image=Image.open(r"imagem\image.png"),
+    dark_image=Image.open(r"imagem\image.png"),
+    size=(login.janela.winfo_screenwidth(), login.janela.winfo_screenheight())
+)
+
+bg_label = ctk.CTkLabel(master=login.janela, image=bg_imagem)
+bg_label.place(relx=0.5, rely=0.5, relwidth=1, relheight=1, anchor='center')  
 
 my_image = ctk.CTkImage(
     light_image=Image.open(r"C:\Users\RafaelMontiel\Downloads\casadog2.png"),
@@ -23,6 +31,7 @@ my_image = ctk.CTkImage(
 
 image_label = ctk.CTkLabel(master=login.janela, image=my_image, text="PetPal", compound="left", font=('Verdana',20,'bold'), fg_color='white')
 image_label.place(x=70, y=35, anchor='center')  
+
 
 frame_login = ctk.CTkFrame(master=login.janela, width=400, height=225, corner_radius=10)
 frame_login.place(relx=0.5, rely=0.5, anchor='center')
