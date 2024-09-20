@@ -6,7 +6,7 @@ class Application:
         self.title = 'PetPals'
         self.background = 'white'
         self.set_background(self.background)
-        self.set_geometry(1920,1080)
+        self.set_geometry(self.janela.winfo_screenwidth(),self.janela.winfo_screenheight())
 
     def set_geometry(self, width, height):
         self.janela.attributes('-toolwindow', True)

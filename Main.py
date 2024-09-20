@@ -13,12 +13,19 @@ class Main(Application):
 root = Main()
 
 frame = ctk.CTkFrame(master=root.janela)
+frame.configure(fg_color="white")
+frame.configure(bg_color="white")
+frame.grid(row=0, column=0, padx=312)
 
 image1 = Image.open("Assets/phone.png")
 
 img = ctk.CTkImage(image1, size=(40,40))
-label = ctk.CTkLabel(root.janela, image=img, text="")
+label = ctk.CTkLabel(frame, image=img, text="")
 label.configure(bg_color="white")
-label.grid(row=0, column=0, padx=20, pady=20)
+label.grid(row=0, column=0, padx=(0,8), pady=24)
+
+ctk.CTkLabel(master=frame, text="+55 67 99871-8371")
+label.configure(text_color="black", bg_color="white", fg_color="white")
+label.grid(row=0, column=1, pady=24)
 
 root.start()
