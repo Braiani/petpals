@@ -19,3 +19,9 @@ class Application:
     def set_background(self, color):
         self.background = color
         self.janela.config(background=color)
+
+
+if __name__ == "__main__":
+    from Main import Main
+
+    Main

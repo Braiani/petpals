@@ -10,16 +10,15 @@ class Main(Application):
     def start(self):
         self.janela.mainloop()
 
-if __name__ == "__main__":
-    root = Main()
+root = Main()
 
-    frame = ctk.CTkFrame(master=root.janela)
+frame = ctk.CTkFrame(master=root.janela)
 
-    image1 = Image.open("Assets/phone.png")
+image1 = Image.open("Assets/phone.png")
 
-    img = ctk.CTkImage(image1, size=(40,40))
-    label = ctk.CTkLabel(root.janela, image=img, text="")
-    label.configure(bg_color="white")
-    label.grid(row=0, column=0, padx=20, pady=20)
+img = ctk.CTkImage(image1, size=(40,40))
+label = ctk.CTkLabel(root.janela, image=img, text="")
+label.configure(bg_color="white")
+label.grid(row=0, column=0, padx=20, pady=20)
 
-    root.start()
+root.start()
