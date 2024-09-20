@@ -25,8 +25,8 @@ bg_label = ctk.CTkLabel(master=login.janela, image=bg_imagem)
 bg_label.place(relx=0.5, rely=0.5, relwidth=1, relheight=1, anchor='center')  
 
 my_image = ctk.CTkImage(
-    light_image=Image.open(r"C:\Users\RafaelMontiel\Downloads\casadog2.png"),
-    dark_image=Image.open(r"C:\Users\RafaelMontiel\Downloads\casadog2.png"),
+    light_image=Image.open(r"imagem\casadog2.png"),
+    dark_image=Image.open(r"imagem\casadog2.png"),
     size=(100, 100)  
 )
 
