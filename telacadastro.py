@@ -1,7 +1,8 @@
 import customtkinter as ctk
 from tkinter import ttk
 from tkinter import messagebox
-from PIL import ImageTk, Image 
+from PIL import ImageTk, Image
+import pywinstyles
 
 def submit_login():
     nome = entry_nomecompleto.get()
@@ -19,11 +20,12 @@ root.resizable(False, False)
 root.title("Pet Pals")
 root.state("zoomed")
 root.geometry("1920x1080")
+root.configure(fg_color="white")
 
 # Header da Tela de Cadastro!!
 
-headerframe = ctk.CTkLabel(root, text="PetPal", font=("Arial",20, 'bold'), text_color="black", width=200)
-headerframe.place(x=25, y=35)
+frame_header = ctk.CTkLabel(root, text="PetPal", font=("Arial",20, 'bold'), text_color="black", width=200)
+frame_header.place(x=25, y=35)
 
 imgpatacachorro = ("imagens/patacachorro.png")  # "petpals/imagens/patacachorro.png"
 img = Image.open(imgpatacachorro)
@@ -60,8 +62,9 @@ width_tela = root.winfo_width()
 label_fundo = ctk.CTkLabel(root, image=tk_fundo, text='', width=width_tela)
 label_fundo.place(x=0, y=100)
 
-frame_login = ctk.CTkFrame(root, width=380, height=450, fg_color='#F8F9FA')
+frame_login = ctk.CTkFrame(root, width=380, height=450, fg_color='#F8F9FA', corner_radius=25, bg_color="#ffffff")
 frame_login.place(x=820, y=270)
+pywinstyles.set_opacity(frame_login, color="#ffffff")
 
 nome_completo = ctk.CTkLabel(frame_login, text="Nome Completo", font=('Arial', 16, 'bold'), text_color='black')
 nome_completo.place(x=35, y=50)
@@ -93,8 +96,18 @@ check_var_termo2 = ctk.BooleanVar()
 checkbox_termo2 = ctk.CTkCheckBox(frame_login, text="Li e concordo com as politicas da empresa", variable=check_var_termo2, font=("Arial",12, 'bold'), text_color='black')
 checkbox_termo2.place(x=45, y=330)
 
-button_submit = ctk.CTkButton(frame_login, text="Cadastrar", command=submit_login, 
-                               fg_color="orange", text_color="white")
-button_submit.place(x=120, y=400)
+botao = ctk.CTkButton(frame_login, text="Cadastrar", font=("Arial",17), command=submit_login, 
+                               fg_color="orange", text_color="white",  width=150, height=50)
+botao.place(x=120, y=380)
+
+#Rodapé da Tela de Cadastro!!
+
+frame_rodape = ctk.CTkLabel(root, text="PetPal", font=("Arial",20, 'bold'), text_color="black",  width=200)# width=200
+frame_rodape.place(x=25, y=950)
+
+imgpatacachorro = ("imagens/patacachorro.png")  # "petpals/imagens/patacachorro.png"
+img = Image.open(imgpatacachorro)
+img = img.resize((20,20))
+img_tk = ImageTk.PhotoImage(img)
 
 root.mainloop()
