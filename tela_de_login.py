@@ -15,6 +15,7 @@ login.set_title("Login")
 login.set_geometry("1920", "1080")
 login.set_background("white")
 
+
 bg_imagem = ctk.CTkImage(
     light_image=Image.open(r"imagem\image.png"),
     dark_image=Image.open(r"imagem\image.png"),
@@ -41,13 +42,13 @@ pywinstyles.set_opacity(frame_login, color="#000000")
 label_nome_email = ctk.CTkLabel(master=frame_login, text="Nome/Email", font=('Verdana',15,'bold'))
 label_nome_email.place(relx=0.19, rely=0.14, anchor='center')
 
-entry_nome_email = ctk.CTkEntry(master=frame_login, width=350)
+entry_nome_email = ctk.CTkEntry(master=frame_login, width=350, fg_color='white')
 entry_nome_email.place(relx=0.50, rely=0.25, anchor='center')
 
 label_senha = ctk.CTkLabel(master=frame_login, text="Senha", font=('Verdana',15,'bold'))
 label_senha.place(relx=0.13, rely=0.44, anchor='center')
 
-entry_senha = ctk.CTkEntry(master=frame_login, width=350, show="*")
+entry_senha = ctk.CTkEntry(master=frame_login, width=350, show="*", fg_color='white')
 entry_senha.place(relx=0.50, rely=0.55, anchor='center')
 
 button_cadastrar = ctk.CTkButton(master=frame_login, text="Cadastrar", fg_color='dark orange')
