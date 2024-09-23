@@ -24,27 +24,30 @@ root.configure(fg_color="white")
 
 # Header da Tela de Cadastro!!
 
-frame_header = ctk.CTkLabel(root, text="PetPal", font=("Arial",20, 'bold'), text_color="black", width=200)
-frame_header.place(x=25, y=35)
+frame_header = ctk.CTkFrame(root, fg_color= "white", height=100, corner_radius=0)
+frame_header.place(relx=0.5 , rely=0, relwidth=1, anchor="n")
+
+label_texto = ctk.CTkLabel(frame_header, text="PetPal", font=("Arial",20, 'bold'), text_color="black", width=200)
+label_texto.place(x=25, y=35)
 
 imgpatacachorro = ("imagens/patacachorro.png")  # "petpals/imagens/patacachorro.png"
 img = Image.open(imgpatacachorro)
 img = img.resize((20,20))
 img_tk = ImageTk.PhotoImage(img)
 
-label_img = ctk.CTkLabel(root, image=img_tk, text='')
+label_img = ctk.CTkLabel(frame_header, image=img_tk, text='')
 label_img.place(x=70, y=33)
 
-inicio = ctk.CTkLabel(root, text="Inicio", font=('Arial',20, 'bold'), text_color="black")
+inicio = ctk.CTkLabel(frame_header, text="Inicio", font=('Arial',20, 'bold'), text_color="black")
 inicio.place(x=800, y=35)
 
-loja = ctk.CTkLabel(root, text="Loja", font=('Arial',20, 'bold'), text_color="black")
+loja = ctk.CTkLabel(frame_header, text="Loja", font=('Arial',20, 'bold'), text_color="black")
 loja.place(x=900, y=35)
 
-sobre = ctk.CTkLabel(root, text="Sobre", font=('Arial',20, 'bold'), text_color="black")
+sobre = ctk.CTkLabel(frame_header, text="Sobre", font=('Arial',20, 'bold'), text_color="black")
 sobre.place(x=1000, y=35)
 
-contato = ctk.CTkLabel(root, text="Contato", font=('Arial',20, 'bold'), text_color="black")
+contato = ctk.CTkLabel(frame_header, text="Contato", font=('Arial',20, 'bold'), text_color="black")
 contato.place(x=1100, y=35)
 
 # Imagem de Fundo da Tela de Cadastro!!
@@ -102,12 +105,6 @@ botao.place(x=120, y=380)
 
 #Rodapé da Tela de Cadastro!!
 
-frame_rodape = ctk.CTkLabel(root, text="PetPal", font=("Arial",20, 'bold'), text_color="black",  width=200)# width=200
-frame_rodape.place(x=25, y=950)
 
-imgpatacachorro = ("imagens/patacachorro.png")  # "petpals/imagens/patacachorro.png"
-img = Image.open(imgpatacachorro)
-img = img.resize((20,20))
-img_tk = ImageTk.PhotoImage(img)
 
 root.mainloop()
