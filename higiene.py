@@ -43,23 +43,23 @@ if __name__ == '__main__':
     frame4 = higiene.set_frame(higiene.janela, 'black', 306,306, 0.7,0.5,'center')
     frame5 = higiene.set_frame(higiene.janela, 'green', 306,306, 0.9,0.5,'center')
 
-    # --- Imagem
+    # --- Image
     imagem1 = higiene.set_image(f'{higiene.get_base_path()}/imagem/higiene/cotonete.png')
-    imagem1_label = higiene.set_image_label(frame1, imagem1,'','top','Verdana',15,'bold','white',0.1,0.5, 'center')
+    imagem1_label = higiene.set_image_label(frame1, imagem1,'','top','Poppins',15,'bold','white',0.1,0.5, 'center')
 
     imagem2 = higiene.set_image(f'{higiene.get_base_path()}/imagem/higiene/dental.png')
-    imagem2_label = higiene.set_image_label(frame2, imagem2,'','top','Verdana',15,'bold','white',0.3,0.5, 'center')
+    imagem2_label = higiene.set_image_label(frame2, imagem2,'','top','Poppins',15,'bold','white',0.3,0.5, 'center')
 
     imagem3 = higiene.set_image(f'{higiene.get_base_path()}/imagem/higiene/image 7.png')
-    imagem3_label = higiene.set_image_label(frame3, imagem3,'','top','Verdana',15,'bold','white',0.5,0.5, 'center')
+    imagem3_label = higiene.set_image_label(frame3, imagem3,'','top','Poppins',15,'bold','white',0.5,0.5, 'center')
 
     imagem4 = higiene.set_image(f'{higiene.get_base_path()}/imagem/higiene/pet_shamp.png')
-    imagem4_label = higiene.set_image_label(frame4, imagem4,'','top','Verdana',15,'bold','white',0.7,0.5, 'center')
+    imagem4_label = higiene.set_image_label(frame4, imagem4,'','top','Poppins',15,'bold','white',0.7,0.5, 'center')
 
     imagem5 = higiene.set_image(f'{higiene.get_base_path()}/imagem/higiene/pomada.png')
-    imagem5_label = higiene.set_image_label(frame5, imagem5,'','top','Verdana',15,'bold','white',0.9,0.5, 'center')
+    imagem5_label = higiene.set_image_label(frame5, imagem5,'','top','Poppins',15,'bold','white',0.9,0.5, 'center')
 
     # --- Text
-    text1 = higiene.set_text(frame1,'Cotonete','top','Verdana',20,'bold','white',0.05,0.65, 'center')
+    text_prod1 = higiene.set_text(frame1,'Cotonete','top','Poppins',20,'normal','white',0.05,0.65, 'center')
     
     higiene.start()
