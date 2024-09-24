@@ -6,13 +6,33 @@ import pywinstyles
 
 def submit_login():
     nome = entry_nomecompleto.get()
+    email = entry_email.get().strip()
     senha = entry_senha.get()
     confirmar_senha = entry_confirmar_senha.get()
-    
+
+    if not nome or not email or not senha or not confirmar_senha:
+        messagebox.showerror("Erro", "Todos os campos devem ser preenchidos.")
+        return
+
     if senha != confirmar_senha:
         messagebox.showerror("Erro", "As senhas não coincidem.")
         return
-    messagebox.showinfo("Sucesso", f"Login realizado com sucesso, {nome}!")
+
+    if email in usuarios_existentes:
+        messagebox.showerror("Erro", "Usuário já cadastrado.")
+        return
+    
+    if not check_var.get() or not check_var_termo2.get():
+        messagebox.showerror("Erro", "Você deve aceitar os termos de uso e as políticas da empresa.")
+        return
+
+    usuarios_existentes[email] = {
+        'nome': nome,
+        'senha': senha
+    }
+    messagebox.showinfo("Sucesso", f"Cadastro realizado com sucesso, {nome}!")
+
+usuarios_existentes = {}
 
 
 root = ctk.CTk()
@@ -114,8 +134,6 @@ rodape_img = ImageTk.PhotoImage(rodape)
 
 label_rodape = ctk.CTkLabel(root, image=rodape_img, text='')
 label_rodape.place(x=0, y=860)
-
-
 
 
 root.mainloop()
