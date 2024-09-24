@@ -17,8 +17,8 @@ login.set_background("white")
 
 
 bg_imagem = ctk.CTkImage(
-    light_image=Image.open(r"imagem\image.png"),
-    dark_image=Image.open(r"imagem\image.png"),
+    light_image=Image.open(r"imagem\dogos\image.png"),
+    dark_image=Image.open(r"imagem\dogos\image.png"),
     size=(login.janela.winfo_screenwidth(), login.janela.winfo_screenheight())
 )
 
@@ -26,8 +26,8 @@ bg_label = ctk.CTkLabel(master=login.janela, image=bg_imagem)
 bg_label.place(relx=0.5, rely=0.5, relwidth=1, relheight=1, anchor='center')  
 
 my_image = ctk.CTkImage(
-    light_image=Image.open(r"imagem\casadog2.png"),
-    dark_image=Image.open(r"imagem\casadog2.png"),
+    light_image=Image.open(r"imagem\dogos\casadog2.png"),
+    dark_image=Image.open(r"imagem\dogos\casadog2.png"),
     size=(100, 100)  
 )
 
