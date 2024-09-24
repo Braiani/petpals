@@ -1,4 +1,5 @@
 import customtkinter as ctk
+import os, sys
 
 class Application:
     def __init__(self) -> None:
@@ -19,6 +20,10 @@ class Application:
     def set_background(self, color):
         self.background = color
         self.janela.config(background=color)
+
+    @staticmethod
+    def get_base_path():
+        return os.path.dirname(os.path.abspath(sys.argv[0]))
 
 
 if __name__ == "__main__":

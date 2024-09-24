@@ -17,7 +17,7 @@ frame.configure(fg_color="white")
 frame.configure(bg_color="white")
 frame.grid(row=0, column=0, padx=312)
 
-image1 = Image.open("Assets/phone.png")
+image1 = Image.open(f"{root.get_base_path()}/Assets/phone.png")
 
 img = ctk.CTkImage(image1, size=(40,40))
 label = ctk.CTkLabel(frame, image=img, text="")
