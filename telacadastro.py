@@ -105,6 +105,4 @@ botao.place(x=120, y=380)
 
 #Rodapé da Tela de Cadastro!!
 
-
-
 root.mainloop()
