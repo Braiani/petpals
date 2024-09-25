@@ -16,16 +16,21 @@ root.configure(fg_color="white")
 #Texto das Imagens ==           ==             ==    
 
 
-oi = ('''Nisl nunc vitae integer ridiculus ultrices quam a scelerisque est. Sollicitudin volutpat blandit maecenas ornare dictum tempor. Amet sem non rutrum et duis. Id nisi ac vitae enim neque sapien.
+t1 = ('''Nisl nunc vitae integer ridiculus ultrices quam a scelerisque est. Sollicitudin volutpat blandit maecenas ornare dictum tempor. Amet sem non rutrum et duis. Id nisi ac vitae enim neque sapien.
 Eu arcu consectetur etiam bibendum fermentum sed lobortis fringilla imperdiet. Aliquet ultrices risus dolor gravida. Faucibus sodales semper a magnis sapien viverra purus sed tortor. Amet risus blandit nunc odio rutrum
 . Adipiscing tincidunt imperdiet at cursus ipsum vulputate pharetra. Tellus nulla commodo ut ut auctor orci blandit at elit. Turpis pulvinar sagittis tristique aliquam vitae ipsum dui. Amet tempor posuere mi amet vel lobortis bibendum. Commodo purus tincidunt cursus tellus massa vel viverra''')
-texto1 = ctk.CTkLabel(root, text=oi, wraplength=636, justify='left')
+texto1 = ctk.CTkLabel(root, text=t1, wraplength=636, justify='left')
 texto1.place(x=700, y=250)
 
 
+t2 = (''' Morbi viverra eleifend in cras orci a leo tellus. Nunc purus
+      adipiscing diam aliquet lorem nunc. Ipsum euismod risus amet
+       eget non. Pulvinar condimentum ultricies tellus a non pellentesque odio pellentesque
+       blandit. Aliquet et massa eget vitae justo tellus
+       donec ac enim. Rhoncus adipiscing cursus ''')
 
-
-
+texto2 = ctk.CTkLabel(root, text=t2, wraplength=680, justify='left')
+texto2.place(x=400, y=600)
 
 
 
