@@ -31,13 +31,15 @@ class Application:
         frame = self.set_frame(options={
             'fg_color': 'white',
             'bg_color': 'white',
-            'width': 1296
+            'width': 1840,
+            'heigth': 91
         }, position={
-            'x': 312,
+            'x': 0,
             'y': 24
         })
 
 
+        logo = Image.open(f"{self.get_base_path()}/imagem/dogos/casadog2.png")
         fone = Image.open(f"{self.get_base_path()}/Assets/phone.png")
         mail = Image.open(f"{self.get_base_path()}/Assets/mail.png")
         location = Image.open(f"{self.get_base_path()}/Assets/location.png")
@@ -46,7 +48,7 @@ class Application:
             'x': 0,
             'y': 0,
         }, options={
-            'bg_color': 'white'
+            'bg_color': 'white',
         })
 
         text_options = {
