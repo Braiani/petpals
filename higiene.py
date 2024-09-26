@@ -1,6 +1,7 @@
 import customtkinter as ctk
 from PIL import Image
 from Application import Application
+from SqlHandler import SqlHandler
 import pywinstyles
 
 # ------------------------------------------------------------------------------- Classe ------------------------------------------------------------------------------- #
@@ -68,13 +69,16 @@ class higiene(Application):
                          rely=rely, 
                          anchor=anchor)
         return self.botao
-    
+
+
 
 # ------------------------------------------------------------------------------- Aplicação ------------------------------------------------------------------------------- #
 if __name__ == '__main__':
     higiene = higiene()
 
-
+    conectar = SqlHandler()
+    sql = 'Select * from products'
+    print(conectar.exec_query(sql))
 
     # --- Frame
     frame1 = higiene.set_frame(higiene.janela, 'white', 306, 306, 0.1,0.5,'center')
@@ -87,7 +91,7 @@ if __name__ == '__main__':
     imagem1 = higiene.set_image(f'{higiene.get_base_path()}/imagem/higiene/cotonete.png', 306,306)
     imagem1_label = higiene.set_image_label(frame1, imagem1,'','top','Poppins',15,'bold','white',0.1,0.5, 'center')
 
-    imagem2 = higiene.set_image(f'{higiene.get_base_path()}/imagem/higiene/dental.png', 306,306)
+    imagem2 = higiene.set_image(f'{higiene.get_base_path()}/imagem/higiene/pomada.png', 306,306)
     imagem2_label = higiene.set_image_label(frame2, imagem2,'','top','Poppins',15,'bold','white',0.3,0.5, 'center')
 
     imagem3 = higiene.set_image(f'{higiene.get_base_path()}/imagem/higiene/image 7.png',306,306)
@@ -96,7 +100,7 @@ if __name__ == '__main__':
     imagem4 = higiene.set_image(f'{higiene.get_base_path()}/imagem/higiene/pet_shamp.png',306,306)
     imagem4_label = higiene.set_image_label(frame4, imagem4,'','top','Poppins',15,'bold','white',0.7,0.485, 'center')
 
-    imagem5 = higiene.set_image(f'{higiene.get_base_path()}/imagem/higiene/pomada.png',306,306)
+    imagem5 = higiene.set_image(f'{higiene.get_base_path()}/imagem/higiene/dental.png',306,306)
     imagem5_label = higiene.set_image_label(frame5, imagem5,'','top','Poppins',15,'bold','white',0.9,0.5, 'center')
 
 
@@ -113,8 +117,8 @@ if __name__ == '__main__':
     text_prod4= higiene.set_text(frame4,'Pet Carrier','top','Poppins',20,'bold','white',0.670,0.65, 'center')
     text_price4 = higiene.set_text(frame4,'R$29,99','top','Poppins',15,'normal','white',0.658,0.679, 'center')
 
-    text_prod5 = higiene.set_text(frame5,'Pasta Dental','top','Poppins',20,'bold','white',0.9,0.65, 'center')
-    text_price5 = higiene.set_text(frame5,'R$29,99','top','Poppins',15,'normal','white',0.9,0.679, 'center')
+    text_prod5 = higiene.set_text(frame5,'Pasta Dental','top','Poppins',20,'bold','white',0.855,0.65, 'center')
+    text_price5 = higiene.set_text(frame5,'R$29,99','top','Poppins',15,'normal','white',0.839,0.679, 'center')
 
     # --- Button
     icone1 = higiene.set_image(f'{higiene.get_base_path()}/imagem/icone/Icon+ bg.png',25,25)
@@ -134,7 +138,7 @@ if __name__ == '__main__':
     pywinstyles.set_opacity(botton4, color='white')
 
     icone5 = higiene.set_image(f'{higiene.get_base_path()}/imagem/icone/Icon+ bg.png',25,25)
-    botton5 = higiene.set_button(frame5, '', 'top', icone5, 'white', 'white','white',0.9, 0.65, 'center')
+    botton5 = higiene.set_button(frame5, '', 'top', icone5, 'white', 'white','white',0.955, 0.65, 'center')
     pywinstyles.set_opacity(botton5, color='white')
 
 

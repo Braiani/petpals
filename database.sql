@@ -58,3 +58,10 @@ INSERT INTO categories (id_category, title, image) VALUES
 (2, 'Alimentação', 'http'),
 (3, 'Brinquedos', 'http'),
 (4, 'Higiene', 'http');
+
+INSERT INTO products (title, image, price, id_category) VALUES
+('Cotonete', '', 19.99, 4),
+('Pomada Neodexa', '', 59.99, 4),
+('Shamposhi', '', 99.99, 4),
+('Pet carrier', '', 29.99, 4),
+('Pasta dental', '', 29.99, 4);
