@@ -127,7 +127,7 @@ botao.place(x=80, y=450)
 #Rodapé da Tela de Cadastro!!
 
 
-img_rodape = ("imagens/rodape.png")  # "petpals/imagens/patacachorro.png"
+img_rodape = ("imagens/rodapecerto.png")  # "petpals/imagens/patacachorro.png"
 rodape = Image.open(img_rodape)
 # rodape = img.resize((20,20))
 rodape_img = ImageTk.PhotoImage(rodape)
