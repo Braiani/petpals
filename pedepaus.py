@@ -164,7 +164,7 @@ label_img.place(x=1260, y=350)
 frameprod2 = ctk.CTkLabel(app, font=('', 25, 'bold'), text='Higiene', text_color='black', height=100, width=320, corner_radius=50)
 frameprod2.place(x=1280, y=580)
 
-img_path = 'imagens/Footer 1.png'
+img_path = 'imagens/Footer 2.png'
 img = Image.open(img_path) 
 img_tk = ImageTk.PhotoImage(img)
 
