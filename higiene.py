@@ -1,6 +1,7 @@
 import customtkinter as ctk
 from PIL import Image
 from Application import Application
+from SqlHandler import SqlHandler
 import pywinstyles
 
 # ------------------------------------------------------------------------------- Classe ------------------------------------------------------------------------------- #
@@ -68,11 +69,16 @@ class higiene(Application):
                          rely=rely, 
                          anchor=anchor)
         return self.botao
-    
+
+
 
 # ------------------------------------------------------------------------------- Aplicação ------------------------------------------------------------------------------- #
 if __name__ == '__main__':
     higiene = higiene()
+
+    conectar = SqlHandler()
+    sql = 'Select * from products'
+    print(conectar.exec_query(sql))
 
     # --- Frame
     frame1 = higiene.set_frame(higiene.janela, 'white', 306, 306, 0.1,0.5,'center')
