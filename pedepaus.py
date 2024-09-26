@@ -57,8 +57,6 @@ frame_label('imagens/coleira.png',420, 510, 'Acessórios')
 
 # label_img.bind('<Button-1>', nova_tela())
 
-
-
 img_path = 'imagens/Footer 2.png'
 img = Image.open(img_path) 
 img_tk = ImageTk.PhotoImage(img)
