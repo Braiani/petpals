@@ -78,7 +78,14 @@ if __name__ == '__main__':
 
     conectar = SqlHandler()
     sql = 'Select * from products'
-    print(conectar.exec_query(sql))
+
+    produto = conectar.exec_query(sql)
+    print(produto)
+
+    for i in produto:    
+        print(i.get('title'))
+        
+
 
     # --- Frame
     frame1 = higiene.set_frame(higiene.janela, 'white', 306, 306, 0.1,0.5,'center')
@@ -104,42 +111,16 @@ if __name__ == '__main__':
     imagem5_label = higiene.set_image_label(frame5, imagem5,'','top','Poppins',15,'bold','white',0.9,0.5, 'center')
 
 
-    # --- Text
-    text_prod1 = higiene.set_text(frame1,'Cotonete','top','Poppins',20,'bold','white',0.05,0.65, 'center')
-    text_price1 = higiene.set_text(frame1,'R$19,99','top','Poppins',15,'normal','white',0.042,0.679, 'center')
+    a = 0
+    b = 0
+    for i in produto:
+        higiene.set_text(frame1,i.get('title'),'top','Poppins',20,'bold','white',0.075+a,0.65, 'center')
+        higiene.set_text(frame1,'R$' + str(i.get('price')),'top','Poppins',15,'normal','white',0.070+a,0.675, 'center')
+        a+=0.19    
 
-    text_prod2 = higiene.set_text(frame2,'Pomada Neodexa','top','Poppins',20,'bold','white',0.273,0.65, 'center')
-    text_price2 = higiene.set_text(frame2,'R$59,99','top','Poppins',15,'normal','white',0.245,0.679, 'center')
-
-    text_prod3= higiene.set_text(frame3,'Shamposhi','top','Poppins',20,'bold','white',0.465,0.65, 'center')
-    text_price3 = higiene.set_text(frame3,'R$99,99','top','Poppins',15,'normal','white',0.453,0.679, 'center')
-
-    text_prod4= higiene.set_text(frame4,'Pet Carrier','top','Poppins',20,'bold','white',0.670,0.65, 'center')
-    text_price4 = higiene.set_text(frame4,'R$29,99','top','Poppins',15,'normal','white',0.658,0.679, 'center')
-
-    text_prod5 = higiene.set_text(frame5,'Pasta Dental','top','Poppins',20,'bold','white',0.855,0.65, 'center')
-    text_price5 = higiene.set_text(frame5,'R$29,99','top','Poppins',15,'normal','white',0.839,0.679, 'center')
-
-    # --- Button
-    icone1 = higiene.set_image(f'{higiene.get_base_path()}/imagem/icone/Icon+ bg.png',25,25)
-    botton1 = higiene.set_button(frame1, '', 'top', icone1, 'white', 'white','white',0.15, 0.65, 'center')
-    pywinstyles.set_opacity(botton1, color='white')
-
-    icone2 = higiene.set_image(f'{higiene.get_base_path()}/imagem/icone/Icon+ bg.png',25,25)
-    botton2 = higiene.set_button(frame2, '', 'top', icone2, 'white', 'white','white',0.362, 0.65, 'center')
-    pywinstyles.set_opacity(botton2, color='white')
-
-    icone3 = higiene.set_image(f'{higiene.get_base_path()}/imagem/icone/Icon+ bg.png',25,25)
-    botton3 = higiene.set_button(frame3, '', 'top', icone3, 'white', 'white','white',0.555, 0.65, 'center')
-    pywinstyles.set_opacity(botton3, color='white')
-
-    icone4 = higiene.set_image(f'{higiene.get_base_path()}/imagem/icone/Icon+ bg.png',25,25)
-    botton4 = higiene.set_button(frame4, '', 'top', icone4, 'white', 'white','white',0.765, 0.65, 'center')
-    pywinstyles.set_opacity(botton4, color='white')
-
-    icone5 = higiene.set_image(f'{higiene.get_base_path()}/imagem/icone/Icon+ bg.png',25,25)
-    botton5 = higiene.set_button(frame5, '', 'top', icone5, 'white', 'white','white',0.955, 0.65, 'center')
-    pywinstyles.set_opacity(botton5, color='white')
-
+        icone1 = higiene.set_image(f'{higiene.get_base_path()}/imagem/icone/Icon+ bg.png',25,25)
+        botton1 = higiene.set_button(frame1, '', 'top', icone1, 'white', 'white','white',0.15+b, 0.65, 'center')
+        pywinstyles.set_opacity(botton1, color='white')
+        b+=0.2
 
     higiene.start()
