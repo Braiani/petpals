@@ -40,14 +40,14 @@ def frame_label(path,px,py,texto):
     img = img.resize((300, 300))
     img_tk = ImageTk.PhotoImage(img)
 
-    frame_bosta = ctk.CTkFrame(app, width=300, height=320, fg_color='blue')
-    frame_bosta.place(x=px, y=py, anchor='center')
-    frame_bosta.pack_propagate(False)
+    frame_imagem = ctk.CTkFrame(app, width=300, height=320, fg_color='blue')
+    frame_imagem.place(x=px, y=py, anchor='center')
+    frame_imagem.pack_propagate(False)
 
-    label_img = ctk.CTkLabel(frame_bosta, image=img_tk, text='', height=300, width=300, corner_radius=0)
+    label_img = ctk.CTkLabel(frame_imagem, image=img_tk, text='', height=300, width=300, corner_radius=0)
     label_img.pack(padx=0, pady=0)
 
-    label = ctk.CTkLabel(frame_bosta, font=('', 25, 'bold'), text=texto, text_color='black', height=100, width=300, fg_color='white', corner_radius=0)
+    label = ctk.CTkLabel(frame_imagem, font=('', 25, 'bold'), text=texto, text_color='black', height=100, width=300, fg_color='white', corner_radius=0)
     label.place(relx=.5, rely=.875, anchor='center')
 
 frame_label('imagens/shampoo.png', 1500, 510, 'Higiene')
