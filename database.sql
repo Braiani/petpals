@@ -60,8 +60,8 @@ INSERT INTO categories (id_category, title, image) VALUES
 (4, 'Higiene', 'http');
 
 INSERT INTO products (title, image, price, id_category) VALUES
-('Cotonete', '', 19.99, 4),
-('Pomada Neodexa', '', 59.99, 4),
-('Shamposhi', '', 99.99, 4),
-('Pet carrier', '', 29.99, 4),
-('Pasta dental', '', 29.99, 4);
+('Cotonete', '/imagem/higiene/cotonete.png', 19.99, 4),
+('Pomada Neodexa', '/imagem/higiene/pomada.png', 59.99, 4),
+('Shamposhi', '/imagem/higiene/image 7.png', 99.99, 4),
+('Pet carrier', '/imagem/higiene/pet_shamp.png', 29.99, 4),
+('Pasta dental', '/imagem/higiene/dental.png', 29.99, 4);
