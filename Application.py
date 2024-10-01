@@ -1,6 +1,6 @@
 import customtkinter as ctk
 import os, sys
-from PIL import Image
+from PIL import Image, ImageTk
 
 class Application:
     def __init__(self) -> None:
@@ -85,6 +85,35 @@ class Application:
             'x': 920
         }, options=text_options)
     
+    
+    def header(self, master=None):
+        master = self.verificar_master(master=master)
+        frame_header = ctk.CTkFrame(master=master, fg_color= "white", height=100, corner_radius=0)
+        frame_header.place(relx=0.5 , rely=0, relwidth=1, anchor="n")
+
+        label_texto = ctk.CTkLabel(frame_header, text="PetPal", font=("Arial",20, 'bold'), text_color="black", width=200)
+        label_texto.place(x=50, y=38)
+
+        imglogo = (f"{self.get_base_path()}/imagem/dogos/casadog2.png")  # "petpals/imagens/patacachorro.png"
+        img = Image.open(imglogo)
+        img = img.resize((70,70))
+        img_tk = ImageTk.PhotoImage(img)
+
+        label_img = ctk.CTkLabel(frame_header, image=img_tk, text='')
+        label_img.place(x=51, y=15)
+
+        inicio = ctk.CTkLabel(frame_header, text="Inicio", font=('Arial',20, 'bold'), text_color="black")
+        inicio.place(x=800, y=35)
+
+        loja = ctk.CTkLabel(frame_header, text="Loja", font=('Arial',20, 'bold'), text_color="black")
+        loja.place(x=900, y=35)
+
+        sobre = ctk.CTkLabel(frame_header, text="Sobre", font=('Arial',20, 'bold'), text_color="black")
+        sobre.place(x=1000, y=35)
+
+        contato = ctk.CTkLabel(frame_header, text="Contato", font=('Arial',20, 'bold'), text_color="black")
+        contato.place(x=1100, y=35)
+ 
     def verificar_master(self, master):
         if not master:
             return self.janela

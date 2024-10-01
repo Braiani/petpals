@@ -10,7 +10,6 @@ class Main(Application):
         self.janela.mainloop()
 
 root = Main()
-root.top_header()
-
+root.header()
 
 root.start()
