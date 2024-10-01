@@ -32,7 +32,7 @@ class Application:
             'fg_color': 'white',
             'bg_color': 'white',
             'width': 1840,
-            'heigth': 91
+            'height': 91
         }, position={
             'x': 0,
             'y': 24
